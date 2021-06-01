@@ -6,7 +6,7 @@ import br.com.jairo.core.DriverFatory;
 
 public class BalancePage {
 	
-	public String ValidarSaldoDaConta(){
+	public String validateAccountBalance(){
 		return DriverFatory.getDriver().findElement(By.xpath("//strong[2]")).getText();
 	}
 

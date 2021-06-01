@@ -13,10 +13,10 @@ public class BalanceTest extends Listener {
 	TransactionsPage transactions = new TransactionsPage();
 	
 	@Test
-	public void verificaSaldoDaConta() {
+	public void AccountBalance() {
 		transactions.btnVoltar();
-		Assert.assertEquals("400", balance.ValidarSaldoDaConta());
-		System.out.println("Saldo : R$ " + balance.ValidarSaldoDaConta());
+		Assert.assertEquals("400", balance.validateAccountBalance());
+		System.out.println("Saldo : R$ " + balance.validateAccountBalance());
 	}
 	
 }

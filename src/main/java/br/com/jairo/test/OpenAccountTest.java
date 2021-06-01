@@ -14,12 +14,12 @@ public class OpenAccountTest extends Listener {
 	
 	@Test
 	public void customerAccount(){	
-		account.clicarBotaoOpenAcc();
-		account.selecionaCliente();
-		account.selecionaMoeda();	
-		account.btnProcess();
-				
-		Assert.assertEquals("Account created successfully with account Number :1016", account.mensagemContaCriada());
+		account.clickButtonOpenAcc();
+		account.selectCustomer();
+		account.selectCurrency();	
+		account.buttonProcess();
+		
+		Assert.assertEquals("Account created successfully with account Number :1016", account.accountCreatedSuccessfully());
 		
 		
 	}

@@ -11,11 +11,11 @@ import br.com.jairo.core.DriverFatory;
 
 public class OpenAccountPage {		
 	
-	public void clicarBotaoOpenAcc(){
+	public void clickButtonOpenAcc(){
 		DriverFatory.getDriver().findElement(By.xpath("//button[@ng-click='openAccount()']")).click();		
 	}
 	
-	public void selecionaCliente(){
+	public void selectCustomer(){
 		
 		WebElement element = DriverFatory.getDriver()
 				.findElement(By.id("userSelect"));
@@ -23,22 +23,22 @@ public class OpenAccountPage {
 		combo.selectByVisibleText("Harry Potter");
 	}
 	
-	public void selecionaMoeda(){
+	public void selectCurrency(){
 		WebElement element = DriverFatory.getDriver()
 				.findElement(By.id("currency"));
 		Select combo = new Select(element);
 		combo.selectByVisibleText("Dollar");
 	}
-	public void btnProcess(){
+	public void buttonProcess(){
 		DriverFatory.getDriver().findElement(By.xpath("//button[@type='submit']")).click();
 	}
 	
-	public String  mensagemContaCriada(){	
+	public String  accountCreatedSuccessfully(){	
 		assertThat(DriverFatory.getDriver().switchTo().alert().getText(), 
 				is("Account created successfully with account Number :1016"));
 		Alert alert = DriverFatory.getDriver().switchTo().alert();			
-		String valor = alert.getText();		
+		String value = alert.getText();		
 		alert.accept();	
-		return valor;
+		return value;
 	}
 }

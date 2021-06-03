@@ -1,11 +1,11 @@
 package br.com.jairo.core;
 
-public class Propriedades {	
+public class Property {	
 	
-	//Para não fechar o browser a cada teste usar "false"
+	//To not close the browser at each test use "false"
 	public static boolean FECHAR_BROWSER = false;	
 	
-	//Por padrão o chrome.
+	//By default the chrome.
 	public static Browsers browser = Browsers.CHROME;	
 	public enum Browsers{
 		CHROME,

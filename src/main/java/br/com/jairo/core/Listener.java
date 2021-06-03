@@ -22,7 +22,7 @@ public class Listener {
 		FileUtils.copyFile(arquivo, new File("target" + File.separator + "screenshot" +
 		File.separator + testName.getMethodName() + ".jpg"));
 		
-		if(Propriedades.FECHAR_BROWSER){
+		if(Property.FECHAR_BROWSER){
 			killDriver();
 		}
 	}

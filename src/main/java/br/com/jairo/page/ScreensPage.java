@@ -2,7 +2,8 @@ package br.com.jairo.page;
 
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
-import br.com.jairo.core.DriverFatory;
+
+import br.com.jairo.config.DriverFatory;
 
 public class ScreensPage {
 	
@@ -26,10 +27,6 @@ public class ScreensPage {
 	public void clickButtonManager(){
 		DriverFatory.getDriver().manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		DriverFatory.getDriver().findElement(By.xpath("//button[@ng-click='manager()']")).click();
-	}
-	
-	public void clickHome(){
-		DriverFatory.getDriver().findElement(By.xpath("//button[@class='btn home']")).click();		
-	}
+	}	
 
 }

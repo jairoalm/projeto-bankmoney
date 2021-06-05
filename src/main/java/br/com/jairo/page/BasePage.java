@@ -1,6 +1,8 @@
-package br.com.jairo.core;
+package br.com.jairo.page;
 
 import org.openqa.selenium.By;
+
+import br.com.jairo.config.DriverFatory;
 
 public class BasePage {
 	

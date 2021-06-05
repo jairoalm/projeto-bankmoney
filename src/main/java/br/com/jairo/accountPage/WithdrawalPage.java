@@ -1,11 +1,11 @@
-package br.com.jairo.page;
+package br.com.jairo.accountPage;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
+/*import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;*/
 
-import br.com.jairo.core.BasePage;
-import br.com.jairo.core.DriverFatory;
+import br.com.jairo.config.DriverFatory;
+import br.com.jairo.page.BasePage;
 
 public class WithdrawalPage extends BasePage {
 

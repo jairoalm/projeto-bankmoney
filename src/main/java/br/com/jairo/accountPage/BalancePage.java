@@ -1,8 +1,8 @@
-package br.com.jairo.page;
+package br.com.jairo.accountPage;
 
 import org.openqa.selenium.By;
 
-import br.com.jairo.core.DriverFatory;
+import br.com.jairo.config.DriverFatory;
 
 public class BalancePage {
 	

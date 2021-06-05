@@ -3,9 +3,8 @@ package br.com.jairo.test;
 import org.junit.Assert;
 import org.junit.Test;
 
-import br.com.jairo.core.DriverFatory;
-import br.com.jairo.core.Listener;
-import br.com.jairo.page.OpenAccountPage;
+import br.com.jairo.config.Listener;
+import br.com.jairo.managerPage.OpenAccountPage;
 
 
 public class OpenAccountTest extends Listener {

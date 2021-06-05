@@ -2,14 +2,15 @@ package br.com.jairo.test;
 
 import org.junit.Assert;
 import org.junit.Test;
-import br.com.jairo.core.Listener;
-import br.com.jairo.page.CadClientePage;
+
+import br.com.jairo.config.Listener;
+import br.com.jairo.managerPage.AddCustomerPage;
 
 
 
 public class CadClienteTest extends Listener {
 	
-	private CadClientePage cliente = new CadClientePage();
+	private AddCustomerPage cliente = new AddCustomerPage();
 	
 	@Test
 	public void addCliente(){	

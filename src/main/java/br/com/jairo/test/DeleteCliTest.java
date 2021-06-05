@@ -2,12 +2,13 @@ package br.com.jairo.test;
 
 
 import org.junit.Test;
-import br.com.jairo.core.Listener;
-import br.com.jairo.page.DeleteCliPage;
+
+import br.com.jairo.config.Listener;
+import br.com.jairo.managerPage.customersPage;
 
 public class DeleteCliTest extends Listener{
 	
-	DeleteCliPage delete = new DeleteCliPage(); 
+	customersPage delete = new customersPage(); 
 	
 	@Test
 	public void deleteCliente() throws InterruptedException {

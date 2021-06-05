@@ -1,13 +1,14 @@
-package br.com.jairo.page;
+package br.com.jairo.managerPage;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
+
+import br.com.jairo.config.DriverFatory;
+
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.*;
-
-import br.com.jairo.core.DriverFatory;
 
 public class OpenAccountPage {		
 	

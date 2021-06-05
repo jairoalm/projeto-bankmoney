@@ -1,9 +1,10 @@
-package br.com.jairo.page;
+package br.com.jairo.managerPage;
 
 import org.openqa.selenium.By;
-import br.com.jairo.core.DriverFatory;
 
-public class DeleteCliPage {
+import br.com.jairo.config.DriverFatory;
+
+public class customersPage {
 	
 	public void clicarBotaoCustomers(){
 		DriverFatory.getDriver().findElement(By.xpath("//button[@ng-click='showCust()']")).click();		

@@ -4,12 +4,13 @@ import org.junit.BeforeClass;
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
+
 import br.com.jairo.page.ScreensPage;
-import br.com.jairo.test.DepositTest;
 import br.com.jairo.test.LoginTest;
+import br.com.jairo.test.TransactionsTest;
 import br.com.jairo.test.WithdrawalTest;
 import br.com.jairo.test.BalanceTest;
-import br.com.jairo.test.TransactionsTest;
+import br.com.jairo.test.DepositTest;
 
 
 @RunWith(Suite.class)

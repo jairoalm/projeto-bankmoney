@@ -3,8 +3,8 @@ package br.com.jairo.test;
 import org.junit.Assert;
 import org.junit.Test;
 
-import br.com.jairo.core.Listener;
-import br.com.jairo.page.LoginPage;
+import br.com.jairo.config.Listener;
+import br.com.jairo.loginPage.LoginPage;
 
 //@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class LoginTest extends Listener {

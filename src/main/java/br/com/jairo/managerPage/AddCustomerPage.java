@@ -1,12 +1,13 @@
-package br.com.jairo.page;
+package br.com.jairo.managerPage;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.*;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
-import br.com.jairo.core.DriverFatory;
 
-public class CadClientePage {
+import br.com.jairo.config.DriverFatory;
+
+public class AddCustomerPage {
 	
 	public void addCustomer() {
 		DriverFatory.getDriver().findElement(By.xpath("//button[@ng-click='addCust()']")).click();

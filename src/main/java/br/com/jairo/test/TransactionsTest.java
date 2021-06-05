@@ -2,8 +2,9 @@ package br.com.jairo.test;
 
 import org.junit.Assert;
 import org.junit.Test;
-import br.com.jairo.core.Listener;
-import br.com.jairo.page.TransactionsPage;
+
+import br.com.jairo.accountPage.TransactionsPage;
+import br.com.jairo.config.Listener;
 
 
 public class TransactionsTest extends Listener {

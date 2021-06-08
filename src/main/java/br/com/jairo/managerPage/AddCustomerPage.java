@@ -13,32 +13,32 @@ public class AddCustomerPage {
 		DriverFatory.getDriver().findElement(By.xpath("//button[@ng-click='addCust()']")).click();
 	}
 
-	public String escreverNome(String nome) {		
-			DriverFatory.getDriver().findElement(By.xpath("//input[@ng-model='fName']")).sendKeys(nome);
-			return nome;		
+	public String writeName(String name) {		
+			DriverFatory.getDriver().findElement(By.xpath("//input[@ng-model='fName']")).sendKeys(name);
+			return name;		
 	}
 	
-	public String escreverSobreNome(String sobreNome) {
-		DriverFatory.getDriver().findElement(By.xpath("//input[@ng-model='lName']")).sendKeys(sobreNome);
-		return sobreNome;
+	public String writeLastName(String lastName) {
+		DriverFatory.getDriver().findElement(By.xpath("//input[@ng-model='lName']")).sendKeys(lastName);
+		return lastName;
 	}
 	
-	public String escreverCep(String cep) {
-		DriverFatory.getDriver().findElement(By.xpath("//input[@ng-model='postCd']")).sendKeys(cep);
-		return cep;
+	public String writeMailbox(String mailbox) {
+		DriverFatory.getDriver().findElement(By.xpath("//input[@ng-model='postCd']")).sendKeys(mailbox);
+		return mailbox;
 	}
 
-	public void btnCadastrar(){
+	public void registerbutton(){
 		DriverFatory.getDriver().findElement(By.xpath("//button[@type='submit']")).click();
 	}
 	
-	public String  clienteSalvoComSucesso(){	
-		assertThat(DriverFatory.getDriver().switchTo().alert().getText(), 
-				is("Customer added successfully with customer id :6"));
+	public String  customerSavedSuccessfull(){			
 		Alert alert = DriverFatory.getDriver().switchTo().alert();
 		String sg = alert.getText();
 		alert.accept();	
-		return sg;
+		assertThat(DriverFatory.getDriver().switchTo().alert().getText(), 
+				is("Customer added successfully with customer id :6"));
+		return sg;		
 	}
 	
 }

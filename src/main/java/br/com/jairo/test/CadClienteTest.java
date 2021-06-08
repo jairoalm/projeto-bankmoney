@@ -10,18 +10,18 @@ import br.com.jairo.managerPage.AddCustomerPage;
 
 public class CadClienteTest extends Listener {
 	
-	private AddCustomerPage cliente = new AddCustomerPage();
+	private AddCustomerPage client = new AddCustomerPage();
 	
 	@Test
 	public void addCliente(){	
 		
-		cliente.addCustomer();
-		cliente.escreverNome("Jairo");
-		cliente.escreverSobreNome("Almeida");
-		cliente.escreverCep("58706362");
-		cliente.btnCadastrar();		
+		client.addCustomer();
+		client.writeName("Jairo");
+		client.writeLastName("Almeida");
+		client.writeMailbox("58706362");
+		client.registerbutton();		
 				
-	    Assert.assertEquals("Customer added successfully with customer id :6", cliente.clienteSalvoComSucesso());
+	    Assert.assertEquals("Customer added successfully with customer id :6", client.customerSavedSuccessfull());
 		
 				
 	}

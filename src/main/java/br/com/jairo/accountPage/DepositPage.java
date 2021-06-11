@@ -21,7 +21,7 @@ public class DepositPage extends BasePage {
 	}
 	
 	public String depositoComSucesso(){
-		return obterTexto(By.xpath("//span[contains(.,'Deposit Successful')]"));
+		return getText(By.xpath("//span[contains(.,'Deposit Successful')]"));
 	}
 
 }

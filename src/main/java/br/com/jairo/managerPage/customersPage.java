@@ -10,7 +10,7 @@ public class customersPage {
 		DriverFatory.getDriver().findElement(By.xpath("//button[@ng-click='showCust()']")).click();		
 	}
 	
-	public void deleteCliente() {	
+	public void deleteCustomer() {	
 		DriverFatory.getDriver()
 		.findElement(By.xpath("//tbody/tr[6]/td[5]/button[contains(.,'Delete')]")).click();
 			

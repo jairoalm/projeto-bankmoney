@@ -1,26 +1,23 @@
 package br.com.jairo.accountPage;
 
 import org.openqa.selenium.By;
-
-import br.com.jairo.config.DriverFatory;
 import br.com.jairo.page.BasePage;
 
 public class DepositPage extends BasePage {
 	
-	public void btnDeposito(){
-		DriverFatory.getDriver().findElement(By.xpath("//button[@ng-click='deposit()']")).click();
+	public void depositButton(){
+		clickButton(By.xpath("//button[@ng-click='deposit()']"));
 	}
 	
-	public String depositarValor(String valor){
-		DriverFatory.getDriver().findElement(By.xpath("//input[@type='number']")).sendKeys(valor);
-		return valor;
+	public void setDepositValue(String value){
+		write(By.xpath("//input[@type='number']"), value);
 	}
 	
-	public void btnSalvar(){
-		DriverFatory.getDriver().findElement(By.xpath("//button[@type='submit']")).click();
+	public void save(){
+		clickButton(By.xpath("//button[@type='submit']"));
 	}
 	
-	public String depositoComSucesso(){
+	public String successfullyDeposit(){
 		return getText(By.xpath("//span[contains(.,'Deposit Successful')]"));
 	}
 

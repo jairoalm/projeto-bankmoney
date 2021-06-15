@@ -9,16 +9,16 @@ import br.com.jairo.config.Listener;
 
 public class DepositTest extends Listener{
 	
-	DepositPage deposito = new DepositPage();
+	DepositPage deposit = new DepositPage();
 	
 	@Test
-	public void depositarValorNaConta(){
-		deposito.btnDeposito();
-		deposito.depositarValor("500");
-		deposito.btnSalvar();
+	public void depositValueInCustomerAccount(){
+		deposit.depositButton();
+		deposit.setDepositValue("500");
+		deposit.save();
 		
-		Assert.assertEquals("Deposit Successful", deposito.depositoComSucesso());
-		System.out.println(deposito.depositoComSucesso());
+		Assert.assertEquals("Deposit Successful", deposit.successfullyDeposit());
+		
 	}
 
 }

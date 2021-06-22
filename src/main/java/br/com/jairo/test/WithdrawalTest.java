@@ -13,7 +13,7 @@ public class WithdrawalTest extends Listener {
 	@Test
 	public void realizarSaque() throws InterruptedException {
 		withdrawal.withdrawButton();
-		withdrawal.withdrawalAmount("100");
+		withdrawal.setWithdrawalValue("100");
 		withdrawal.saveValueWithdrawal();
 		
 		Assert.assertEquals("Transaction successful", withdrawal.successfulWithdrawal());

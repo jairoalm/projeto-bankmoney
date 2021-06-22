@@ -7,6 +7,8 @@ import br.com.jairo.config.DriverFatory;
 
 public class ScreensPage {
 	
+	private BasePage page = new BasePage();
+	
 	public void acessarTelaIncial(){
 		DriverFatory.getDriver().get("http://www.way2automation.com/angularjs-protractor/banking/#/login");
 	}
@@ -19,14 +21,13 @@ public class ScreensPage {
 		DriverFatory.getDriver().get("http://www.way2automation.com/angularjs-protractor/banking/#/manager");
 	}
 		
-	public void clicarBotaoCustomer() {
-		DriverFatory.getDriver()
-		.findElement(By.xpath("//button[@class='btn btn-primary btn-lg']")).click();
+	public void clickButtonCustomer() {
+		page.clickButton(By.xpath("//button[@class='btn btn-primary btn-lg']"));
 	}
 			
 	public void clickButtonManager(){
 		DriverFatory.getDriver().manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-		DriverFatory.getDriver().findElement(By.xpath("//button[@ng-click='manager()']")).click();
+		page.clickButton(By.xpath("//button[@ng-click='manager()']"));
 	}	
 
 }

@@ -24,7 +24,7 @@ public class LoginPage extends BasePage {
 	}
 	
 	public String bemVindoCliente(){
-		return obterTexto(By.xpath("//strong[contains(.,'Welcom')]"));
+		return getText(By.xpath("//strong[contains(.,'Welcom')]"));
 	}
 	
 	

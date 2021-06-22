@@ -2,18 +2,17 @@ package br.com.jairo.page;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
-
 import br.com.jairo.config.DriverFatory;
 
 public class BasePage {
 	
 	/***** Escrever no campo *****/
 	
-	public void write (By by, String texto){
-		DriverFatory.getDriver().findElement(by).sendKeys(texto);		
+	public void write (By by, String text){
+		DriverFatory.getDriver().findElement(by).sendKeys(text);		
 	}
-	public void write (String id, String texto){
-		write(By.id(id), texto);
+	public void write (String id, String text){
+		write(By.id(id), text);
 	}
 	
 	/***** Texto *****/

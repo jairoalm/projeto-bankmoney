@@ -9,13 +9,11 @@ import br.com.jairo.page.BasePage;
 
 public class WithdrawalPage extends BasePage {
 
-	DepositPage valorDepositado = new DepositPage();
-
 	public void withdrawButton() {
 		DriverFatory.getDriver().findElement(By.xpath("//button[contains(.,'Withdrawl')]")).click();
 	}
 
-	public void withdrawalAmount(String value) throws InterruptedException {
+	public void setWithdrawalValue(String value) throws InterruptedException {
 		Thread.sleep(2000);
 		/*
 		 * WebDriverWait wait = new WebDriverWait(DriverFatory.getDriver(), 60);
@@ -30,11 +28,11 @@ public class WithdrawalPage extends BasePage {
 	}
 
 	public String successfulWithdrawal() {
-		return obterTexto(By.xpath("//span[contains(.,'Transaction successful')]"));
+		return getText(By.xpath("//span[contains(.,'Transaction successful')]"));
 	}
 
 	public String errorWithdrawing() {
-		return obterTexto(By
+		return getText(By
 				.xpath("//span[contains(.,'Transaction Failed. You can not withdraw amount more than the balance.')]"));
 	}
 

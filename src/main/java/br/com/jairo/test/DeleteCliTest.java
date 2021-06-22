@@ -4,16 +4,16 @@ package br.com.jairo.test;
 import org.junit.Test;
 
 import br.com.jairo.config.Listener;
-import br.com.jairo.managerPage.customersPage;
+import br.com.jairo.managerPage.DeleteCustomersPage;
 
 public class DeleteCliTest extends Listener{
 	
-	customersPage delete = new customersPage(); 
+	DeleteCustomersPage delete = new DeleteCustomersPage(); 
 	
 	@Test
 	public void deleteCliente() throws InterruptedException {
 		delete.clicarBotaoCustomers();
-		delete.deleteCliente();
+		delete.deleteCustomer();
 		
 		//Assert.assertEquals(5,6);
 					

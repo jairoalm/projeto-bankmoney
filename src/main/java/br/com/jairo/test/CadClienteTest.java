@@ -16,12 +16,12 @@ public class CadClienteTest extends Listener {
 	public void addCliente(){	
 		
 		client.addCustomer();
-		client.writeName("Jairo");
-		client.writeLastName("Almeida");
-		client.writeMailbox("58706362");
+		client.setWriteName("Jairo");
+		client.setWriteLastName("Almeida");
+		client.setWriteMailbox("58706362");
 		client.registerbutton();		
 				
-	    Assert.assertEquals("Customer added successfully with customer id :6", client.customerSavedSuccessfull());
+	    Assert.assertEquals("Customer added successfully with customer id :6", client.getCustomerSavedSuccessfull());
 		
 				
 	}

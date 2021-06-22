@@ -14,9 +14,12 @@ public class BalanceTest extends Listener {
 	
 	@Test
 	public void AccountBalance() {
-		transactions.btnVoltar();
+		transactions.buttonBack();
+		
 		Assert.assertEquals("400", balance.validateAccountBalance());
+		
 		System.out.println("Saldo : R$ " + balance.validateAccountBalance());
+		
 	}
 	
 }

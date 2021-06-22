@@ -1,18 +1,18 @@
 package br.com.menuPage;
 
 import org.openqa.selenium.By;
-
-import br.com.jairo.config.DriverFatory;
+import br.com.jairo.page.BasePage;
 
 public class Menu {
 	
+	private BasePage page = new BasePage();
+	
 	public void clickHome(){
-		DriverFatory.getDriver().findElement(By.xpath("//button[@class='btn home']")).click();		
+		page.clickButton(By.xpath("//button[@class='btn home']"));		
 	}
 	
 	public void buttonLogout(){
-		DriverFatory.getDriver()
-		.findElement(By.xpath("//button[@class='btn logout']")).click();		
+		page.clickButton(By.xpath("//button[@class='btn logout']"));		
 	}
 
 }

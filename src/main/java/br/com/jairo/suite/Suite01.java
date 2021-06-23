@@ -21,7 +21,8 @@ public class Suite01 {
 	
 	@BeforeClass
 	public static void acessaPage() {
-		screensCustomer.interagirComDadosDoCliente();	
+		screensCustomer.acessarTelaIncial();
+		screensCustomer.clickButtonManager();
 	}
 
 }

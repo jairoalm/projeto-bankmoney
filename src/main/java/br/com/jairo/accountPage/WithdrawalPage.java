@@ -4,13 +4,12 @@ import org.openqa.selenium.By;
 /*import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;*/
 
-import br.com.jairo.config.DriverFatory;
 import br.com.jairo.page.BasePage;
 
 public class WithdrawalPage extends BasePage {
 
 	public void withdrawButton() {
-		DriverFatory.getDriver().findElement(By.xpath("//button[contains(.,'Withdrawl')]")).click();
+		clickButton(By.xpath("//button[contains(.,'Withdrawl')]"));
 	}
 
 	public void setWithdrawalValue(String value) throws InterruptedException {
@@ -20,11 +19,11 @@ public class WithdrawalPage extends BasePage {
 		 * wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(
 		 * "//input[@type='number']")));
 		 */
-		DriverFatory.getDriver().findElement(By.xpath("//input[@type='number']")).sendKeys(value);
+         write(By.xpath("//input[@type='number']"), value);
     }
 
 	public void saveValueWithdrawal() {
-		DriverFatory.getDriver().findElement(By.xpath("//button[@type='submit']")).click();
+		clickButton(By.xpath("//button[@type='submit']"));
 	}
 
 	public String successfulWithdrawal() {

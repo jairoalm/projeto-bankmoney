@@ -20,8 +20,8 @@ public class Suite01 {
 	public static ScreensPage screensCustomer = new ScreensPage();
 	
 	@BeforeClass
-	public static void acessaPage() {
-		screensCustomer.acessarTelaIncial();
+	public static void accessPageHome() {
+		screensCustomer.accessHomeScreen();
 		screensCustomer.clickButtonManager();
 	}
 

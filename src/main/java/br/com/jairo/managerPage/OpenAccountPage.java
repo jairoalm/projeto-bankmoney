@@ -1,23 +1,22 @@
 package br.com.jairo.managerPage;
 
+import static org.hamcrest.CoreMatchers.is;
+import static org.junit.Assert.assertThat;
+
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
-
 import br.com.jairo.config.DriverFatory;
+import br.com.jairo.page.BasePage;
 
-import static org.hamcrest.CoreMatchers.is;
-import static org.junit.Assert.*;
-
-public class OpenAccountPage {		
+public class OpenAccountPage extends BasePage {		
 	
 	public void clickButtonOpenAcc(){
-		DriverFatory.getDriver().findElement(By.xpath("//button[@ng-click='openAccount()']")).click();		
+		clickButton(By.xpath("//button[@ng-click='openAccount()']"));		
 	}
 	
-	public void selectCustomer(){
-		
+	public void selectCustomer(){		
 		WebElement element = DriverFatory.getDriver()
 				.findElement(By.id("userSelect"));
 		Select combo = new Select(element);
@@ -31,7 +30,7 @@ public class OpenAccountPage {
 		combo.selectByVisibleText("Dollar");
 	}
 	public void buttonProcess(){
-		DriverFatory.getDriver().findElement(By.xpath("//button[@type='submit']")).click();
+		clickButton(By.xpath("//button[@type='submit']"));
 	}
 	
 	public String  accountCreatedSuccessfully(){	

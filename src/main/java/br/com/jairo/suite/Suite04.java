@@ -17,8 +17,8 @@ public class Suite04 {
     public static ScreensPage screensPage = new ScreensPage();
 	
 	@BeforeClass
-	public static void acessaPage() {		
-		screensPage.acessarTelaIncial();
+	public static void accessPageOpenAccount(){		
+		screensPage.accessHomeScreen();
 		screensPage.clickButtonManager();	
 	}
 	

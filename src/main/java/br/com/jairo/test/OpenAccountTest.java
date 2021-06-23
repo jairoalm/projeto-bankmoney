@@ -15,7 +15,7 @@ public class OpenAccountTest extends Listener {
 	public void customerAccount(){	
 		account.clickButtonOpenAcc();
 		account.selectCustomer();
-		account.selectCurrency();	
+		account.selectCurrency();
 		account.buttonProcess();
 		
 		Assert.assertEquals("Account created successfully with account Number :1016", account.accountCreatedSuccessfully());

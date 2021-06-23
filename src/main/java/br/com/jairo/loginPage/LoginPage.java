@@ -9,22 +9,21 @@ import br.com.jairo.config.DriverFatory;
 import br.com.jairo.page.BasePage;
 
 
-public class LoginPage extends BasePage {	
+public class LoginPage extends BasePage {		
 	
-	
-	public void selecionaComboUsuario(){
+	public void selecComboUser(){
 		WebElement element = DriverFatory.getDriver()
 				.findElement(By.id("userSelect"));
 		Select combo = new Select(element);
 		combo.selectByVisibleText("Harry Potter");
 	}
 	
-	public void clicarBotaoLogin() {
-		DriverFatory.getDriver().findElement(By.xpath("//button[@class='btn btn-default']")).click();;
+	public void clickButtonLogin() {
+		clickButton(By.xpath("//button[@class='btn btn-default']"));
 	}
 	
-	public String bemVindoCliente(){
-		return obterTexto(By.xpath("//strong[contains(.,'Welcom')]"));
+	public String welcomeCustomer(){
+		return getText(By.xpath("//strong[contains(.,'Welcom')]"));
 	}
 	
 	

@@ -17,11 +17,13 @@ import br.com.jairo.test.LogoutTest;
 	LogoutTest.class
 })
 public class Suite02 {
-	public static ScreensPage telaLogin = new ScreensPage();
+	public static ScreensPage screenLogin = new ScreensPage();
 
 	@BeforeClass
 	public static void acessoCliente() {
-		telaLogin.acessarTelaLogin();
+		screenLogin.accessHomeScreen();
+		screenLogin.clickButtonCustomerHomeScreen();
+		
 	}
 
 }

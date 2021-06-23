@@ -5,28 +5,27 @@ import org.openqa.selenium.By;
 
 import br.com.jairo.config.DriverFatory;
 
-public class ScreensPage {
+public class ScreensPage extends BasePage{
 	
-	public void acessarTelaIncial(){
+	public void accessHomeScreen(){
 		DriverFatory.getDriver().get("http://www.way2automation.com/angularjs-protractor/banking/#/login");
 	}
 	
-	public void acessarTelaLogin(){
+	public void accessHomeLogin(){
 		DriverFatory.getDriver().get("http://www.way2automation.com/angularjs-protractor/banking/#/customer");
 	}
 	
-	public void interagirComDadosDoCliente(){
+	public void interactWithCustomerData(){
 		DriverFatory.getDriver().get("http://www.way2automation.com/angularjs-protractor/banking/#/manager");
 	}
 		
-	public void clicarBotaoCustomer() {
-		DriverFatory.getDriver()
-		.findElement(By.xpath("//button[@class='btn btn-primary btn-lg']")).click();
+	public void clickButtonCustomerHomeScreen() {
+		clickButton(By.xpath("//button[@class='btn btn-primary btn-lg']"));
 	}
 			
 	public void clickButtonManager(){
 		DriverFatory.getDriver().manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-		DriverFatory.getDriver().findElement(By.xpath("//button[@ng-click='manager()']")).click();
+		clickButton(By.xpath("//button[@ng-click='manager()']"));
 	}	
 
 }

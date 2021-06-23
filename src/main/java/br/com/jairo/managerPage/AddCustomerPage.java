@@ -6,38 +6,36 @@ import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 
 import br.com.jairo.config.DriverFatory;
+import br.com.jairo.page.BasePage;
 
-public class AddCustomerPage {
+public class AddCustomerPage extends BasePage {
 	
 	public void addCustomer() {
-		DriverFatory.getDriver().findElement(By.xpath("//button[@ng-click='addCust()']")).click();
+		clickButton(By.xpath("//button[@ng-click='addCust()']"));
 	}
 
-	public String writeName(String name) {		
-			DriverFatory.getDriver().findElement(By.xpath("//input[@ng-model='fName']")).sendKeys(name);
-			return name;		
+	public void writeName(String name) {		
+			write(By.xpath("//input[@ng-model='fName']"), name);
 	}
 	
-	public String writeLastName(String lastName) {
-		DriverFatory.getDriver().findElement(By.xpath("//input[@ng-model='lName']")).sendKeys(lastName);
-		return lastName;
+	public void writeLastName(String lastName) {
+		write(By.xpath("//input[@ng-model='lName']"), lastName);
 	}
 	
-	public String writeMailbox(String mailbox) {
-		DriverFatory.getDriver().findElement(By.xpath("//input[@ng-model='postCd']")).sendKeys(mailbox);
-		return mailbox;
+	public void writeMailbox(String mailbox) {
+		write(By.xpath("//input[@ng-model='postCd']"), mailbox);
 	}
 
 	public void registerbutton(){
-		DriverFatory.getDriver().findElement(By.xpath("//button[@type='submit']")).click();
+		clickButton(By.xpath("//button[@type='submit']"));
 	}
 	
-	public String  customerSavedSuccessfull(){			
-		Alert alert = DriverFatory.getDriver().switchTo().alert();
-		String sg = alert.getText();
-		alert.accept();	
+	public String  customerSavedSuccessfull(){	
 		assertThat(DriverFatory.getDriver().switchTo().alert().getText(), 
 				is("Customer added successfully with customer id :6"));
+		Alert alert = DriverFatory.getDriver().switchTo().alert();
+		String sg = alert.getText();
+		alert.accept();			
 		return sg;		
 	}
 	

@@ -23,11 +23,12 @@ import br.com.jairo.test.DepositTest;
 })
 public class Suite03 {
 	
-	public static ScreensPage realizaTransacoes = new ScreensPage();
+	public static ScreensPage performTransactions = new ScreensPage();
 	
 	@BeforeClass
-	public static void acessoGerente(){
-		realizaTransacoes.acessarTelaLogin();	
+	public static void managerAccessToVerifyTransactions(){
+		performTransactions.accessHomeScreen();
+		performTransactions.clickButtonCustomerHomeScreen();
 	}
 
 }

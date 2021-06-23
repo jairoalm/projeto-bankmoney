@@ -12,11 +12,11 @@ public class LoginTest extends Listener {
 	LoginPage login = new LoginPage();
 			
 	@Test
-	public void efetuarLoginCliente() throws InterruptedException{		
-		login.selecionaComboUsuario();
-		login.clicarBotaoLogin();	
+	public void efetuarLoginCliente(){		
+		login.selecComboUser();
+		login.clickButtonLogin();	
 		
-		Assert.assertEquals("Welcome Harry Potter !!", login.bemVindoCliente());
-		System.out.println("Bem vindo: " + login.bemVindoCliente());
+		Assert.assertEquals("Welcome Harry Potter !!", login.welcomeCustomer());
+		System.out.println("Welcome: " + login.welcomeCustomer());
 	}
 }

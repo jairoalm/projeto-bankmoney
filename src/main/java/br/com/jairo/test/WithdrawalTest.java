@@ -11,7 +11,7 @@ public class WithdrawalTest extends Listener {
 	private WithdrawalPage withdrawal = new WithdrawalPage();
 
 	@Test
-	public void realizarSaque() throws InterruptedException {
+	public void withdrawFromTheAccount() throws InterruptedException {
 		withdrawal.withdrawButton();
 		withdrawal.setWithdrawalValue("100");
 		withdrawal.saveValueWithdrawal();

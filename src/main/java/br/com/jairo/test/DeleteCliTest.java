@@ -12,7 +12,7 @@ public class DeleteCliTest extends Listener{
 	DeleteCustomersPage delete = new DeleteCustomersPage(); 
 	
 	@Test
-	public void deleteCliente() throws InterruptedException {
+	public void deleteCustomer() throws InterruptedException {
 		delete.clickButtonCustomers();
 		delete.deleteCustomer();
 								

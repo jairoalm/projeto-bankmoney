@@ -12,7 +12,7 @@ public class LoginTest extends Listener {
 	LoginPage login = new LoginPage();
 			
 	@Test
-	public void efetuarLoginCliente(){		
+	public void loginCustomer(){		
 		login.selecComboUser();
 		login.clickButtonLogin();	
 		

@@ -13,7 +13,7 @@ public class CadClienteTest extends Listener {
 	private AddCustomerPage client = new AddCustomerPage();
 	
 	@Test
-	public void addCliente(){	
+	public void newCustomer(){	
 		
 		client.addCustomer();
 		client.writeName("Jairo");

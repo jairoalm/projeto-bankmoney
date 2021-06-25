@@ -17,7 +17,7 @@ public class Listener {
 	public TestName testName = new TestName();
 	
 	@After
-	public void finaliza() throws IOException{
+	public void finisih() throws IOException{
 		TakesScreenshot ss = (TakesScreenshot) DriverFatory.getDriver();
 		File arquivo = ss.getScreenshotAs(OutputType.FILE);
 		FileUtils.copyFile(arquivo, new File("target" + File.separator + "screenshot" +

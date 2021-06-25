@@ -9,15 +9,17 @@ import br.com.jairo.config.Listener;
 
 public class TransactionsTest extends Listener {
 	
-	TransactionsPage transacoes = new TransactionsPage();
+	TransactionsPage transactions = new TransactionsPage();
 	
 	@Test
-	public void validarTransacoesDaConta() {
-		transacoes.botaoTransacoes();
-		Assert.assertEquals("500", transacoes.verificaDepositoRealizado());
-		Assert.assertEquals("100", transacoes.verificaSaqueRealizado());
-		System.out.println("Deposito : R$ " + transacoes.verificaDepositoRealizado());
-		System.out.println("Saque : R$ " + transacoes.verificaSaqueRealizado());
+	public void validadeCustomerAccountTransactions() {
+		transactions.buttonTransactions();
+		
+		Assert.assertEquals("500", transactions.checkDepositValue());
+		Assert.assertEquals("100", transactions.checkValueWithdrawal());
+		
+		System.out.println("Deposito : R$ " + transactions.checkDepositValue());
+		System.out.println("Saque : R$ " + transactions.checkValueWithdrawal());
 	}
 
 }

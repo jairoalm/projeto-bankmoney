@@ -10,11 +10,11 @@ import br.com.jairo.config.Listener;
 public class BalanceTest extends Listener {
 	
 	BalancePage balance = new BalancePage();	
-	TransactionsPage transactions = new TransactionsPage();
+	TransactionsPage trans = new TransactionsPage();
 	
 	@Test
 	public void AccountBalance() {
-		transactions.btnVoltar();
+		trans.buttonBack();
 		Assert.assertEquals("400", balance.validateAccountBalance());
 		System.out.println("Saldo : R$ " + balance.validateAccountBalance());
 	}
